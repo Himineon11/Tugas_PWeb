@@ -1,8 +1,4 @@
-/* ==========================================
-   ROYAL CSS DESIGN SYSTEM (COQUETTE PINK BLUE)
-   Inspirasi Warna: Full Pink & Blue Gingham Ribbon
-   Murni Tanpa Warna Kuning
-   ========================================== */
+
 :root {
     --bg-white: #FFFDFB;       /* Putih bersih gading untuk dasar */
     --pink-ribbon: #FFB5C5;    /* Warna pink pita utama (Warna Dominan) */
@@ -11,8 +7,8 @@
     --blue-pastel: #BFE3FA;    /* Warna biru kotak (Warna Dominan) */
     --blue-soft-line: #DBEFFF; /* Biru tipis untuk variasi garis */
     
-    --text-main: #584145;      /* Cokelat berry gelap (sangat kontras & mudah dibaca) */
-    --text-muted: #8F7276;     /* Cokelat susu pudar untuk sub-judul */
+    --text-main: #584145;      
+    --text-muted: #8F7276;     
     --royal-white: #ffffff;
     --glass-bg: rgba(255, 255, 255, 0.92);
 }
@@ -29,7 +25,7 @@ body {
     background-color: var(--bg-white);
     color: var(--text-main);
     
-    /* SIHIR CSS MASTERPIECE: Membuat pola kain kotak-kotak pink & biru persis seperti gambar */
+   
     background-image: 
         linear-gradient(90deg, rgba(255, 181, 197, 0.25) 20px, transparent 20px),
         linear-gradient(rgba(255, 181, 197, 0.25) 20px, transparent 20px),
@@ -97,7 +93,7 @@ nav {
 }
 
 .nav-links a::after {
-    content: "🎀"; /* Diganti menjadi ikon pita pink yang super imut! */
+    content: "🎀"; 
     position: absolute;
     bottom: -16px;
     left: 50%;
@@ -158,7 +154,7 @@ h2.section-title {
 }
 
 #beranda::before {
-    content: "🎀"; /* Hiasan atas menjadi pita besar */
+    content: "🎀"; 
     font-size: 3.5rem;
     position: absolute;
     top: -45px;
