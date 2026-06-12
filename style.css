@@ -1,0 +1,558 @@
+/* ==========================================
+   ROYAL CSS DESIGN SYSTEM (COQUETTE PINK BLUE)
+   Inspirasi Warna: Full Pink & Blue Gingham Ribbon
+   Murni Tanpa Warna Kuning
+   ========================================== */
+:root {
+    --bg-white: #FFFDFB;       /* Putih bersih gading untuk dasar */
+    --pink-ribbon: #FFB5C5;    /* Warna pink pita utama (Warna Dominan) */
+    --pink-soft-line: #FFE2E8; /* Pink tipis untuk garis kotak */
+    --pink-dark: #FF6688;      /* Pink tegas untuk teks judul & ikon */
+    --blue-pastel: #BFE3FA;    /* Warna biru kotak (Warna Dominan) */
+    --blue-soft-line: #DBEFFF; /* Biru tipis untuk variasi garis */
+    
+    --text-main: #584145;      /* Cokelat berry gelap (sangat kontras & mudah dibaca) */
+    --text-muted: #8F7276;     /* Cokelat susu pudar untuk sub-judul */
+    --royal-white: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.92);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-white);
+    color: var(--text-main);
+    
+    /* SIHIR CSS MASTERPIECE: Membuat pola kain kotak-kotak pink & biru persis seperti gambar */
+    background-image: 
+        linear-gradient(90deg, rgba(255, 181, 197, 0.25) 20px, transparent 20px),
+        linear-gradient(rgba(255, 181, 197, 0.25) 20px, transparent 20px),
+        linear-gradient(90deg, rgba(191, 227, 250, 0.3) 30px, transparent 30px),
+        linear-gradient(rgba(191, 227, 250, 0.3) 30px, transparent 30px);
+    background-size: 70px 70px;
+    background-position: 0 0, 0 0, 35px 35px, 35px 35px;
+    
+    overflow-x: hidden;
+    padding-top: 100px;
+}
+
+/* Navigasi Melayang (Floating Ribbon Navbar) - Kombinasi Pink & Biru */
+nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    max-width: 900px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 15px 30px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(255, 181, 197, 0.25);
+    border: 3px solid var(--pink-ribbon); /* Bingkai warna pink pita */
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--pink-dark);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 5px 10px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--pink-dark);
+}
+
+.nav-links a::after {
+    content: "🎀"; /* Diganti menjadi ikon pita pink yang super imut! */
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    transform: translateX(-50%) scale(1);
+}
+
+/* Container Utama */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Kartu Section Utama - Putih Bersih dengan Detail Tepi Pink-Biru */
+.section-card {
+    background: var(--royal-white);
+    padding: 40px;
+    border-radius: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 12px 35px rgba(143, 114, 118, 0.08); 
+    border: 3px solid var(--blue-pastel); /* Bingkai biru pastel jernih */
+    border-left: 12px solid var(--pink-ribbon); /* Aksen tebal kiri pink pita */
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.8s ease both;
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px rgba(255, 181, 197, 0.35);
+    border-color: var(--pink-ribbon); /* Berubah menjadi pink saat disentuh */
+}
+
+/* Gaya Judul Section */
+h2.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--pink-dark);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 3px dashed var(--pink-ribbon);
+    padding-bottom: 10px;
+}
+
+/* --- BERANDA SECTION --- */
+#beranda {
+    text-align: center;
+    padding-top: 60px;
+}
+
+#beranda::before {
+    content: "🎀"; /* Hiasan atas menjadi pita besar */
+    font-size: 3.5rem;
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 4px 6px rgba(255, 181, 197, 0.3));
+    z-index: 10;
+}
+
+.profile-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 6px solid var(--blue-pastel); /* Bingkai foto biru pastel murni */
+    object-fit: cover;
+    box-shadow: 0 8px 25px rgba(191, 227, 250, 0.6);
+}
+
+.profile-sparkle {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: var(--royal-white);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 2px solid var(--pink-ribbon);
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: var(--pink-dark);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-muted);
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.bio-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+/* Info Kontak - Menggunakan Paduan Biru Segar */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.contact-item {
+    background: rgba(191, 227, 250, 0.25); /* Biru sangat transparan lembut */
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 2px dashed var(--blue-pastel);
+    font-size: 0.95rem;
+    transition: all 0.3s;
+}
+
+.contact-item:hover {
+    background: var(--pink-soft-line);
+    border-color: var(--pink-dark);
+    transform: scale(1.03);
+}
+
+.contact-item i {
+    color: var(--pink-dark);
+    font-size: 1.2rem;
+}
+
+/* --- SKILLS SECTION --- Kotak Biru Pastel Imut */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 18px;
+}
+
+.skill-card {
+    background: rgba(191, 227, 250, 0.35); 
+    padding: 20px 15px;
+    border-radius: 22px;
+    text-align: center;
+    border: 2px solid var(--blue-pastel);
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    background: var(--pink-ribbon);
+    border-color: var(--royal-white);
+    transform: translateY(-5px);
+}
+
+.skill-card:hover .skill-name {
+    color: var(--royal-white);
+}
+
+.skill-icon {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.skill-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+/* --- TIMELINE GENERAL SYSTEM --- */
+.royal-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    position: relative;
+}
+
+.royal-timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    bottom: 10px;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--pink-ribbon), var(--blue-pastel), var(--pink-ribbon));
+    border-radius: 10px;
+}
+
+.timeline-card {
+    position: relative;
+    padding-left: 55px;
+}
+
+.timeline-badge {
+    position: absolute;
+    left: 5px;
+    top: 0;
+    width: 34px;
+    height: 34px;
+    background: var(--royal-white);
+    border: 3px solid var(--pink-ribbon);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    z-index: 5;
+    box-shadow: 0 4px 8px rgba(255, 181, 197, 0.4);
+}
+
+.timeline-date {
+    font-size: 0.85rem;
+    color: var(--pink-dark);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.timeline-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--text-main);
+    margin-bottom: 3px;
+}
+
+.timeline-header h4 {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.timeline-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 650px) {
+    .timeline-body {
+        grid-template-columns: 1.3fr 1fr;
+    }
+}
+
+.experience-desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-main);
+}
+
+/* Frame Foto Pengalaman & Organisasi - Biru Lembut Estetik */
+.experience-frame {
+    border-radius: 18px;
+    overflow: hidden;
+    border: 4px solid var(--blue-pastel); 
+    box-shadow: 0 6px 15px rgba(191, 227, 250, 0.5);
+    position: relative;
+    height: 160px;
+    transition: all 0.3s ease;
+}
+
+.experience-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.experience-frame:hover img {
+    transform: scale(1.1);
+}
+
+.experience-frame::after {
+    content: "🎀 Coquette";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--pink-dark);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* ==========================================
+   COQUETTE EVIDENCE GALLERY (POLAROID SYSTEM)
+   ========================================== */
+.evidence-gallery {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    justify-content: center;
+}
+
+/* Kartu bergaya foto cetak Polaroid */
+.polaroid-card {
+    background: #FFFDFB;
+    padding: 16px;
+    padding-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(143, 114, 118, 0.12);
+    border: 2px solid var(--pink-soft-line);
+    transition: transform 0.3s ease;
+}
+
+.polaroid-card:hover {
+    transform: scale(1.03) rotate(1deg);
+}
+
+/* Pengatur layout khusus untuk foto bukti ketiga agar berada di tengah */
+@media (min-width: 650px) {
+    .wide-evidence {
+        grid-column: span 2;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+.polaroid-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.polaroid-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Caption teks di bawah foto ala tulisan tangan rapi */
+.polaroid-caption {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    line-height: 1.4;
+}
+
+.polaroid-caption strong {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 2px;
+}
+
+/* Dekorasi Bulatan Mutiara Kecil di Sudut Foto */
+.pearl-deco {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, #ffffff 30%, #e2d3d5 100%);
+    border-radius: 50%;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    z-index: 2;
+}
+.pearl-deco.tl { top: 10px; left: 10px; }
+.pearl-deco.tr { top: 10px; right: 10px; }
+.pearl-deco.bl { bottom: 10px; left: 10px; }
+.pearl-deco.br { bottom: 10px; right: 10px; }
+
+/* Tombol Magic - Gradasi Cantik */
+.magic-btn-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.magic-btn {
+    background: linear-gradient(45deg, var(--blue-pastel), var(--pink-ribbon));
+    color: var(--text-main);
+    border: none;
+    padding: 15px 35px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(255, 181, 197, 0.4);
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid var(--royal-white);
+}
+
+.magic-btn:hover {
+    transform: scale(1.06) rotate(-1deg);
+    background: linear-gradient(45deg, var(--pink-ribbon), var(--pink-dark));
+    color: var(--royal-white);
+    box-shadow: 0 12px 30px rgba(255, 102, 136, 0.5);
+}
+
+/* Efek Sihir (Disesuaikan Menjadi Hanya Emoticon Tema Gambar Ini) */
+.sparkle-particle {
+    position: fixed;
+    pointer-events: none;
+    font-size: 1.5rem;
+    animation: flySihir 1.5s ease-out forwards;
+    z-index: 9999;
+}
+
+/* ANIMASI KEYFRAMES */
+@keyframes flySihir {
+    0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--dir-x), var(--dir-y)) scale(0) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    border-top: 3px dashed var(--blue-pastel);
+    margin-top: 50px;
+}
